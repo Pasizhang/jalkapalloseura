@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ilmoituksen muokkaus</title>
+</head>
+
+<body>
+  <h1>Ilmoituksen muokkaus</h1>
+  <form action="/update_item" method="post">
+    <p>
+      Paikka: <br />
+      <input type="text" name="place" value="{{item.place}}" />
+    </p>
+    <p>
+     Kellonaika: <br />
+     <input type="text" name="times" size = "8" value = "{{item.times}}"/>
+    </p>
+    <p>
+     Pelaajien määrä: <br />
+     <input type="text" name="players" size = "2" value = "{{item.players}}"/>
+    </p>
+    <input type="hidden" name="item_id" value = "{{ item.id }}"/>
+    <input type="submit" value="Päivitä ilmoitusta" />
+  </form>
+</body>
+
+</html>
