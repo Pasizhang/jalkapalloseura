@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ilmoituksen poisto</title>
+</head>
+
+<body>
+  <h1>Ilmoituksen poisto</h1>
+  <p>Ilmoitus: {{ item.place }}</p>
+  <p>Haluatko varmasti poistaa ilmoituksen?</p>
+  <form action="/remove_item/{{ item.id }}" method="post">
+   <input type="submit" name="remove" Value="Poista ilmoitus">
+   <input type="submit" name="back" Value="Takaisin">
+  </form>
+</body>
+
+</html>

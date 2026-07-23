@@ -26,3 +26,7 @@ def update_item(item_id, place, times, players):
                               players = ?
                           WHERE id = ?"""
     db.execute(sql, [place, times, players, item_id])
+
+def remove_item(item_id):
+    sql = "DELETE FROM items WHERE id = ?"
+    db.execute(sql, [item_id])
